@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/munka" android:title="Munkahelyeim:"/>
+    <item android:id="@+id/tanulmany" android:title="Tanulmányaim: "/>
+    <item android:id="@+id/nyelv" android:title="Nyelvismeret: "/>
+    <item android:id="@+id/szakma" android:title="Szakmai cél: "/>
+    <item android:id="@+id/ismeret" android:title="Tapasztalat, jártasság: "/>
+    <item android:id="@+id/tulahdonsag" android:title="Személyes tulajdonságaim: "/>
+</menu>

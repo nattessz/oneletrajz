@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">oneletrajz</string>
+    <string name="etrajz">Önéletrajz</string>
+    <string name="magyar">Magyar nyelvű Önéletrajz</string>
+    <string name="nemet">Német nyelvű Önéletrajz</string>
+    <string name="bizonyit">Bizonyitványok</string>
+    <string name="todo">TODO</string>
+    <string name="szem">Személyes adataim: </string>
+    <string name="nagy_attila">Név: Nagy Attila</string>
+    <string name="anyja">Anyja neve: Kroh Erzsébet</string>
+    <string name="cimem">Lakcím: Pécs, Polgárszőlő utca 4.</string>
+    <string name="szulhely">Születési hely: Mohács</string>
+    <string name="szulido">Születési idő: 1981. November 30.</string>
+    <string name="gazdinfo">Végzettség: Gazdasági Informatikus</string>
+    <string name="hivas">Hívás</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="munkahelyeim">Munkahelyeim:</string>
+    <string name="mediamarkt">2004 – 2012. Augusztus: Média Markt Pécs Kft: - Számítástechnikai Szaktanácsadó</string>
+    <string name="gasparfest">2013.Január: Gáspár Festék Áruház (Rendszergazda-Pénztáros)</string>
+    <string name="berufliche_erfahrungen">Berufliche Erfahrungen:</string>
+    <string name="todo3">TODO</string>
+    <string name="iskol_im">Tanulmányaim: </string>
+    <string name="nagy_attila1">Nagy Attila</string>
+    <string name="nyit">Nyit</string>
+    <string name="zar">Zár</string>
+</resources>
