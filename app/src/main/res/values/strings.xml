@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">oneletrajz</string>
+    <string name="app_name">Nagy Attila</string>
     <string name="etrajz">Önéletrajz</string>
     <string name="magyar">Magyar nyelvű Önéletrajz</string>
     <string name="nemet">Német nyelvű Önéletrajz</string>
@@ -23,4 +23,6 @@
     <string name="nagy_attila1">Nagy Attila</string>
     <string name="nyit">Nyit</string>
     <string name="zar">Zár</string>
+    <string name="nagy_att">Nagy Attila</string>
+    <string name="ez_az_els_fragmentem">Ez az első fragmentem</string>
 </resources>

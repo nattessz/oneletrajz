@@ -17,6 +17,7 @@
         android:textColor="@color/white"
         android:text="@string/nagy_attila1"
         android:layout_marginTop="5dp"
-        />
+        android:textSize="18sp"
+        android:fontFamily="@font/hand"/>
 
 </LinearLayout>

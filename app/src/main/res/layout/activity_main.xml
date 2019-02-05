@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@android:color/darker_gray"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -15,23 +15,25 @@
         android:gravity="center"
         android:text="@string/etrajz"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:fontFamily="@font/hand"/>
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="682dp"
         android:layout_marginBottom="50dp"
-        android:background="@android:color/holo_blue_bright"
+        android:background="@color/lightgrey"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="328dp"
-            android:layout_height="89dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
             android:layout_marginBottom="2dp"
-            android:drawableEnd="@drawable/onkepkicsi"
             android:drawablePadding="0dp"
+            android:fontFamily="@font/hand"
+            android:gravity="center"
             android:text="@string/szem"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -39,8 +41,10 @@
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/hand"
+            android:gravity="center"
             android:text="@string/nagy_attila"
             android:textSize="18sp"
             android:textStyle="italic" />
@@ -49,6 +53,8 @@
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/hand"
+            android:gravity="center"
             android:text="@string/anyja"
             android:textSize="14sp"
             android:textStyle="italic" />
@@ -57,6 +63,8 @@
             android:id="@+id/textView7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/hand"
+            android:gravity="center"
             android:text="@string/cimem"
             android:textSize="14sp"
             android:textStyle="italic" />
@@ -65,6 +73,8 @@
             android:id="@+id/textView8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/hand"
+            android:gravity="center"
             android:text="@string/szulhely"
             android:textSize="14sp"
             android:textStyle="italic" />
@@ -73,6 +83,8 @@
             android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/hand"
+            android:gravity="center"
             android:text="@string/szulido"
             android:textSize="14sp"
             android:textStyle="italic" />
@@ -81,6 +93,8 @@
             android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/hand"
+            android:gravity="center"
             android:text="@string/gazdinfo"
             android:textSize="14sp"
             android:textStyle="italic" />
@@ -89,23 +103,35 @@
             android:id="@+id/magygomb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/dialog_holo_dark_frame"
             android:contentDescription="@string/todo"
-            app:srcCompat="@drawable/gombmagy" />
+            android:gravity="center"
+            app:srcCompat="@drawable/myargomb" />
 
-        <Button
+        <ImageButton
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/button_onoff_indicator_on"
-            android:text="@string/nemet" />
+            android:contentDescription="@string/todo"
+            android:gravity="center"
+            app:srcCompat="@drawable/nemetgomb" />
 
-        <Button
+
+        <ImageButton
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/button_onoff_indicator_on"
-            android:text="@string/bizonyit" />
+            android:contentDescription="@string/todo"
+            android:gravity="center"
+            app:srcCompat="@drawable/bizony" />
+
+        <ImageButton
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
+            android:gravity="center"
+            app:srcCompat="@drawable/hivas" />
+
 
     </LinearLayout>
 

@@ -1,16 +1,19 @@
 package com.nattessz.oneletrajz;
 
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 
-public class MagyarNyelv extends MainActivity{
+public class MagyarNyelv extends MainActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     ListView listView;
     ListView listView2;
@@ -29,6 +32,9 @@ public class MagyarNyelv extends MainActivity{
         magyarDrawer.addDrawerListener(magyarTog);
         magyarTog.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.design_navigation_view2);
+        navigationView.setNavigationItemSelectedListener(this);
 
 
         //listView=(ListView)findViewById(R.id.munkahelylist);
@@ -54,6 +60,35 @@ public class MagyarNyelv extends MainActivity{
         //ArrayAdapter arrayAdapter2 = new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList2);
         //listView2.setAdapter(arrayAdapter2);
 
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // menu gomb vezérlés
+        int id = item.getItemId();
+
+        if (id == R.id.munka) {
+            Toast.makeText(getApplicationContext(),"Ide jön a fragment",Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.tanulmany) {
+            Toast.makeText(getApplicationContext(),"Ide jön a fragment 1",Toast.LENGTH_SHORT).show();
+        }
+        else if (id == R.id.nyelv) {
+            Toast.makeText(getApplicationContext(),"Ide jön a fragment 2",Toast.LENGTH_SHORT).show();
+        }
+        else if (id == R.id.szakma) {
+            Toast.makeText(getApplicationContext(),"Ide jön a fragment 3",Toast.LENGTH_SHORT).show();
+        }
+        else if (id == R.id.ismeret) {
+            Toast.makeText(getApplicationContext(),"Ide jön a fragment 4",Toast.LENGTH_SHORT).show();
+        }
+        else if (id == R.id.tulahdonsag) {
+            Toast.makeText(getApplicationContext(),"Ide jön a fragment 5",Toast.LENGTH_SHORT).show();
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.magyardraw);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 
     @Override

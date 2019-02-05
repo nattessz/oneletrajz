@@ -6,14 +6,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/lightgrey">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nagy_att"
+            android:gravity="center"
+            android:padding="20dp"/>
+
+
+        <!-- The main content view where fragments are loaded -->
+        <FrameLayout
+            android:id="@+id/flContent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
     <android.support.design.widget.NavigationView
+        android:id="@+id/design_navigation_view"
         app:headerLayout="@layout/header"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@color/lightgrey"
         app:itemTextColor="@color/grey"
         app:menu="@menu/nemetmenu"
-        android:layout_gravity="start">
+        android:layout_gravity="start"
+        app:itemTextAppearance="@style/MenuItems">
 
 
     </android.support.design.widget.NavigationView>

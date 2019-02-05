@@ -1,6 +1,7 @@
 package com.nattessz.oneletrajz;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,15 +9,15 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private Animation animMoveUp;
     private ImageButton magyargomb;
     private Button button1;
-    private Button button2;
-    private Button button3;
+    private ImageButton button2;
+    private ImageButton button3;
 
 
     @Override
