@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/person" android:title="Persönliche Angaben: "/>
-    <item android:id="@+id/beruf" android:title="Berufliche Erfahrungen: "/>
-    <item android:id="@+id/ausbild" android:title="Ausbildung: "/>
-    <item android:id="@+id/motiv" android:title="Motivation "/>
-    <item android:id="@+id/kentnis" android:title="Kenntnisse "/>
-    <item android:id="@+id/faigket" android:title="Fähigkeiten, Fertigkeiten:"/>
+    <item android:id="@+id/person" android:title="Persönliche Angaben" android:icon="@drawable/baseline_filter_1_black_18dp"/>
+    <item android:id="@+id/beruf" android:title="Berufliche Erfahrungen" android:icon="@drawable/baseline_filter_2_black_18dp"/>
+    <item android:id="@+id/ausbild" android:title="Ausbildung" android:icon="@drawable/baseline_filter_3_black_18dp"/>
+    <item android:id="@+id/motiv" android:title="Motivation" android:icon="@drawable/baseline_filter_4_black_18dp"/>
+    <item android:id="@+id/kentnis" android:title="Kenntnisse" android:icon="@drawable/baseline_filter_5_black_18dp"/>
+    <item android:id="@+id/faigket" android:title="Fähigkeiten, Fertigkeiten" android:icon="@drawable/baseline_filter_6_black_18dp"/>
 </menu>

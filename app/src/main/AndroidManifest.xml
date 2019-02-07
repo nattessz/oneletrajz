@@ -17,8 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="MagyarNyelv" />
-        <activity android:name=".NemetNyelv" />
+        <activity android:name="MagyarNyelv"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".NemetNyelv"
+            android:screenOrientation="portrait"/>
         <activity android:name=".Bizonyitvany"
             android:screenOrientation="portrait"/>
     </application>

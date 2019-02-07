@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/munka" android:title="Munkahelyeim:"/>
-    <item android:id="@+id/tanulmany" android:title="Tanulmányaim: "/>
-    <item android:id="@+id/nyelv" android:title="Nyelvismeret: "/>
-    <item android:id="@+id/szakma" android:title="Szakmai cél: "/>
-    <item android:id="@+id/ismeret" android:title="Tapasztalat, jártasság: "/>
-    <item android:id="@+id/tulahdonsag" android:title="Személyes tulajdonságaim: "/>
+    <item android:id="@+id/munka" android:title="Munkahelyeim" android:icon="@drawable/baseline_filter_1_black_18dp"/>
+    <item android:id="@+id/tanulmany" android:title="Tanulmányaim" android:icon="@drawable/baseline_filter_2_black_18dp"/>
+    <item android:id="@+id/nyelv" android:title="Nyelvismeret" android:icon="@drawable/baseline_filter_3_black_18dp"/>
+    <item android:id="@+id/szakma" android:title="Szakmai cél" android:icon="@drawable/baseline_filter_4_black_18dp"/>
+    <item android:id="@+id/ismeret" android:title="Tapasztalat, jártasság" android:icon="@drawable/baseline_filter_5_black_18dp"/>
+    <item android:id="@+id/tulahdonsag" android:title="Személyes tulajdonságaim" android:icon="@drawable/baseline_filter_6_black_18dp"/>
 </menu>

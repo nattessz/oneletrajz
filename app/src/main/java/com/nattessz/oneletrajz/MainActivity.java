@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private Button button1;
     private ImageButton button2;
     private ImageButton button3;
+    private ImageButton button5;
 
 
     @Override
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         magyargomb =(ImageButton) findViewById(R.id.magygomb);
-        //button1 = findViewById(R.id.button1);
+        button5 = findViewById(R.id.button5);
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
         animMoveUp = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_up);
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         //button1.startAnimation(animMoveUp);
         button2.startAnimation(animMoveUp);
         button3.startAnimation(animMoveUp);
+        button5.startAnimation(animMoveUp);
 
 
         magyargomb.setOnClickListener(new View.OnClickListener() {

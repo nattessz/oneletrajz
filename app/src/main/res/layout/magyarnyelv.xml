@@ -6,6 +6,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/lightgrey">
+
+        <TextView
+            android:id="@+id/focimmagy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/theme"
+            android:padding="20sp"
+            android:text=" "
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    <FrameLayout
+        android:id="@+id/magycontent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    </LinearLayout>
+
     <android.support.design.widget.NavigationView
         android:id="@+id/design_navigation_view2"
         app:headerLayout="@layout/header"

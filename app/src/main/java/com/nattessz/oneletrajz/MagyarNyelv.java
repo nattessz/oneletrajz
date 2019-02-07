@@ -2,12 +2,15 @@ package com.nattessz.oneletrajz;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -19,6 +22,7 @@ public class MagyarNyelv extends MainActivity implements NavigationView.OnNaviga
     ListView listView2;
     private DrawerLayout magyarDrawer;
     private ActionBarDrawerToggle magyarTog;
+    private TextView focim;
 
 
 
@@ -27,7 +31,9 @@ public class MagyarNyelv extends MainActivity implements NavigationView.OnNaviga
        super.onCreate(savedInstanceState);
        setContentView(R.layout.magyarnyelv);
 
+        focim = (TextView)findViewById(R.id.focimmagy);
         magyarDrawer = (DrawerLayout)findViewById(R.id.magyardraw);
+        FrameLayout frameLayout = (FrameLayout)findViewById(R.id.magycontent);
         magyarTog = new ActionBarDrawerToggle(this,magyarDrawer,R.string.nyit,R.string.zar);
         magyarDrawer.addDrawerListener(magyarTog);
         magyarTog.syncState();
@@ -36,29 +42,10 @@ public class MagyarNyelv extends MainActivity implements NavigationView.OnNaviga
         NavigationView navigationView = (NavigationView) findViewById(R.id.design_navigation_view2);
         navigationView.setNavigationItemSelectedListener(this);
 
-
-        //listView=(ListView)findViewById(R.id.munkahelylist);
-        //listView2=(ListView)findViewById(R.id.iskolalist);
-
-        //ArrayList<String> arrayList = new ArrayList<>();
-        //arrayList.add("2013.Január: Gáspár Festék Áruház (Rendszergazda-Pénztáros)");
-        //arrayList.add("2004 – 2012. Augusztus:  Média Markt Pécs Kft: Számítástechnikai Szaktanácsadó");
-
-        //ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList);
-        //listView.setAdapter(arrayAdapter);
-
-        //ArrayList<String> arrayList2 = new ArrayList<>();
-        //arrayList2.add("2017-      : http://sanfranciscoboljottem.com/Java programozó");
-        //arrayList2.add("2012-2013.01: PHP-MYSQL Webprogramozó");
-        //arrayList2.add("2003-2004: TELC Tudományos Ismeretterjesztő Társulat (Középfokú komplex C-típusú Német nyelvvizsga) ");
-        //arrayList2.add("2003-2003: ECDL");
-        //arrayList2.add("2001-2003: School Of Business Üzleti Szakközépiskola (OKJ-s Felsőfokú Gazdasági Informatikus)");
-        //arrayList2.add("1999-2001: 500.sz. Angster József Szakképző iskola (érettségi)");
-        //arrayList2.add("1996-1999: Pécsi Kereskedelmi Idegenforgalmi és Vendéglátóipari Szakközépiskola és Szakmunkásképző (műszaki eladó)");
-        //arrayList2.add("1988-1996: Általános Iskola Himesháza");
-
-        //ArrayAdapter arrayAdapter2 = new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList2);
-        //listView2.setAdapter(arrayAdapter2);
+        focim.setText("Munkahelyeim:");
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.magycontent, new FragmentMunka());
+        ft.commit();
 
     }
 
@@ -69,21 +56,39 @@ public class MagyarNyelv extends MainActivity implements NavigationView.OnNaviga
         int id = item.getItemId();
 
         if (id == R.id.munka) {
-            Toast.makeText(getApplicationContext(),"Ide jön a fragment",Toast.LENGTH_SHORT).show();
+            focim.setText("Munkahelyeim:");
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.magycontent, new FragmentMunka());
+            ft.commit();
         } else if (id == R.id.tanulmany) {
-            Toast.makeText(getApplicationContext(),"Ide jön a fragment 1",Toast.LENGTH_SHORT).show();
+            focim.setText("Tanulmányaim:");
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.magycontent, new FragmentTanul());
+            ft.commit();
         }
         else if (id == R.id.nyelv) {
-            Toast.makeText(getApplicationContext(),"Ide jön a fragment 2",Toast.LENGTH_SHORT).show();
+            focim.setText("Nyelvismeret:");
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.magycontent, new FragmentNyelv());
+            ft.commit();
         }
         else if (id == R.id.szakma) {
-            Toast.makeText(getApplicationContext(),"Ide jön a fragment 3",Toast.LENGTH_SHORT).show();
+            focim.setText("Szakmai cél:");
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.magycontent, new FragmentSzakma());
+            ft.commit();
         }
         else if (id == R.id.ismeret) {
-            Toast.makeText(getApplicationContext(),"Ide jön a fragment 4",Toast.LENGTH_SHORT).show();
+            focim.setText("Tapasztalat, jártasság:");
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.magycontent, new FragmentTapaszt());
+            ft.commit();
         }
         else if (id == R.id.tulahdonsag) {
-            Toast.makeText(getApplicationContext(),"Ide jön a fragment 5",Toast.LENGTH_SHORT).show();
+            focim.setText("Személyes tulajdonságaim:");
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.magycontent, new FragmentSzemely());
+            ft.commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.magyardraw);

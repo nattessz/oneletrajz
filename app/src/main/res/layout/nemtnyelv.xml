@@ -12,20 +12,24 @@
         android:orientation="vertical"
         android:background="@color/lightgrey">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/nagy_att"
-            android:gravity="center"
-            android:padding="20dp"/>
-
 
         <!-- The main content view where fragments are loaded -->
+        <TextView
+            android:id="@+id/focim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:padding="20sp"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:fontFamily="@font/theme"/>
+
         <FrameLayout
             android:id="@+id/flContent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            />
     </LinearLayout>
 
 
