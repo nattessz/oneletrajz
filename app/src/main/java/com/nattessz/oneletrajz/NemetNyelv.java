@@ -8,6 +8,9 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.ListView;
@@ -24,7 +27,6 @@ public class NemetNyelv<nemetTog> extends MainActivity implements NavigationView
     private ActionBarDrawerToggle nemetTog;
     private boolean isDrawerFixed;
     private TextView focim;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,7 @@ public class NemetNyelv<nemetTog> extends MainActivity implements NavigationView
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.design_navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
+
 
         focim.setText("Persönliche Angaben:");
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();

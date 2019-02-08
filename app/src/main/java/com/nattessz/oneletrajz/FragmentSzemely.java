@@ -18,8 +18,14 @@ public class FragmentSzemely extends Fragment {
         //setNavigationViewListener();
         View view = inflater.inflate(R.layout.fragment_szemely, parent, false);
 
-        String[] szemely = {"Jó kommunikációs készség",
-                "pontosság"};
+        String[] szemely = {"Jó kommunikációs készséggel és emberismerettel rendelkezem.",
+                "Erősségeim a  pontosság és a megbízhatóság.",
+                "Képes vagyok az önálló munkavégzésre.",
+                "Szeretek csapatban is dolgozni.",
+                "Nyitott vagyok új ismeretek elsajátítására.",
+                "Gyorsan és könnyen tanulok.",
+                "Nem dohányzom."};
+
         ListView listView = (ListView) view.findViewById(R.id.szemelylist);
         ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(
                 getActivity(),

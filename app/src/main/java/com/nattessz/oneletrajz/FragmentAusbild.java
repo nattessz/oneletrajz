@@ -35,7 +35,6 @@ public class FragmentAusbild extends Fragment {
         );
 
         listView.setAdapter(listViewAdapter);
-
         return view;
     }
 

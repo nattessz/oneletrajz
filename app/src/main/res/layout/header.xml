@@ -7,17 +7,9 @@
     android:padding="20dp">
 
     <android.support.v7.widget.AppCompatImageView
-        android:src="@drawable/atimenu"
-        android:layout_width="75dp"
-        android:layout_height="75dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="@string/nagy_attila1"
-        android:layout_marginTop="5dp"
-        android:textSize="18sp"
-        android:fontFamily="@font/hand"/>
+        android:layout_width="124dp"
+        android:layout_height="119dp"
+        android:layout_gravity="center"
+        android:src="@drawable/atimenu" />
 
 </LinearLayout>
