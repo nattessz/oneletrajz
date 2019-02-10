@@ -19,13 +19,13 @@ public class Bizonyitvany extends MainActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bizonyitvany);
 
-        flipper = (ViewFlipper)findViewById(R.id.viewflipp);
+        flipper = findViewById(R.id.viewflipp);
         //images = (ImageView)findViewById(R.id.images);
-        next = (ImageButton)findViewById(R.id.next);
-        pervius = (ImageButton)findViewById(R.id.pervius);
+        next = findViewById(R.id.next);
+        pervius = findViewById(R.id.pervius);
 
-        next.setOnClickListener((View.OnClickListener) this);
-        pervius.setOnClickListener((View.OnClickListener) this);
+        next.setOnClickListener(this);
+        pervius.setOnClickListener(this);
     }
 
 

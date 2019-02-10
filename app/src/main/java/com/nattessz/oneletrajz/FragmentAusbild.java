@@ -1,6 +1,7 @@
 package com.nattessz.oneletrajz;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -27,13 +28,14 @@ public class FragmentAusbild extends Fragment {
                 "1999-2001: 500.sz. Angster József Fachschule (Abitur)",
                 "1996-1999: Fachschule und Fachmittelschule für Handel und Gastronomie (Verkäufer)",
                 "1988-1996: Grundschule in Himesháza"};
-        ListView listView = (ListView) view.findViewById(R.id.ausbildlist);
+        ListView listView = view.findViewById(R.id.ausbildlist);
         ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(
                 getActivity(),
                 android.R.layout.simple_list_item_1,
                 personLeir
         );
-
+        Animation scaleUp = AnimationUtils.loadAnimation(getActivity(), R.anim.move_left);
+        listView.startAnimation(scaleUp);
         listView.setAdapter(listViewAdapter);
         return view;
     }

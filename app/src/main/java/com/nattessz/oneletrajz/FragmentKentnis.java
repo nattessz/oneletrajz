@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -17,9 +19,7 @@ public class FragmentKentnis extends Fragment{
     private Inflater inflater;
     private int parent;
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState){
-        //setNavigationViewListener();
         View view = inflater.inflate(R.layout.fragment_kentnis, parent, false);
 
         String[] personkentnis = {"PHP Web Programmiren",
@@ -32,13 +32,15 @@ public class FragmentKentnis extends Fragment{
         "Verwertung",
         "Netbeans IDE, Android Studio IDE"};
 
-        ListView listView1 = (ListView) view.findViewById(R.id.kentnislist);
+        ListView listView1 = view.findViewById(R.id.kentnislist);
         ArrayAdapter<String> listViewAdapter;
         listViewAdapter = new ArrayAdapter<String>(
-                Objects.requireNonNull(getActivity()),
-                android.R.layout.simple_list_item_1,
-                personkentnis
+               getActivity(),
+               android.R.layout.simple_list_item_1,
+               personkentnis
         );
+        Animation scaleUp = AnimationUtils.loadAnimation(getActivity(), R.anim.move_up);
+        listView1.startAnimation(scaleUp);
         listView1.setAdapter(listViewAdapter);
         return view;
     }

@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -15,7 +17,6 @@ public class FragmentTanul extends Fragment {
     private int parent;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState){
-        //setNavigationViewListener();
         View view = inflater.inflate(R.layout.fragment_tanul, parent, false);
 
         String[] tanul = {"2017- : http://sanfranciscoboljottem.com/Java programozó",
@@ -26,13 +27,15 @@ public class FragmentTanul extends Fragment {
                 "1999-2001: 500.sz. Angster József Szakképző iskola (érettségi)",
                 "1996-1999: Pécsi Kereskedelmi Idegenforgalmi és Vendéglátóipari Szakközépiskola és Szakmunkásképző (műszaki eladó)",
                 "1988-1996: Általános Iskola Himesháza"};
-        ListView listView = (ListView) view.findViewById(R.id.tanullist);
+        ListView listView = view.findViewById(R.id.tanullist);
         ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(
                 getActivity(),
                 android.R.layout.simple_list_item_1,
                 tanul
         );
 
+        Animation scaleUp = AnimationUtils.loadAnimation(getActivity(), R.anim.move_up);
+        listView.startAnimation(scaleUp);
         listView.setAdapter(listViewAdapter);
         return view;
     }

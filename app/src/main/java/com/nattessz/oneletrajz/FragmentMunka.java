@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -15,18 +17,18 @@ public class FragmentMunka extends Fragment {
     private int parent;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState){
-        //setNavigationViewListener();
         View view = inflater.inflate(R.layout.fragment_munka, parent, false);
 
         String[] munka = {"2013.Január: Gáspár Festék Áruház (Rendszergazda-Pénztáros)",
                 "2004 – 2012. Augusztus:  Média Markt Pécs Kft: Számítástechnikai Szaktanácsadó"};
-        ListView listView = (ListView) view.findViewById(R.id.munkalist);
+        ListView listView = view.findViewById(R.id.munkalist);
         ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(
                 getActivity(),
                 android.R.layout.simple_list_item_1,
                 munka
         );
-
+        Animation scaleUp = AnimationUtils.loadAnimation(getActivity(), R.anim.move_down);
+        listView.startAnimation(scaleUp);
         listView.setAdapter(listViewAdapter);
         return view;
     }

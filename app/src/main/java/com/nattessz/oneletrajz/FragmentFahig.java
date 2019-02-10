@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -29,13 +31,15 @@ public class FragmentFahig extends Fragment {
                 "Offen für neue Kenntnisse",
                 "Ich rauche nicht"};
 
-        ListView listView = (ListView) view.findViewById(R.id.fhaiglist);
+        ListView listView = view.findViewById(R.id.fhaiglist);
         ArrayAdapter<String> listViewAdapter;
         listViewAdapter = new ArrayAdapter<String>(
                 Objects.requireNonNull(getActivity()),
                 android.R.layout.simple_list_item_1,
                 personfhaig
         );
+        Animation scaleUp = AnimationUtils.loadAnimation(getActivity(), R.anim.move_up);
+        listView.startAnimation(scaleUp);
         listView.setAdapter(listViewAdapter);
         return view;
     }

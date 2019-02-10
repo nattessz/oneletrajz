@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -19,13 +21,15 @@ public class FragmentBeruf extends Fragment {
         View view = inflater.inflate(R.layout.fragment_beruf, parent, false);
 
         String[] personLeir = {"Seit 2013: Gaspar Farbengeschäft","Seit 2004 Bis 2012: Sachberater für Computer und Informatik bei Media Markt"};
-        ListView listView = (ListView) view.findViewById(R.id.beruflist);
+        ListView listView = view.findViewById(R.id.beruflist);
         ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(
                 getActivity(),
                 android.R.layout.simple_list_item_1,
                 personLeir
         );
 
+        Animation scaleUp = AnimationUtils.loadAnimation(getActivity(), R.anim.move_down);
+        listView.startAnimation(scaleUp);
         listView.setAdapter(listViewAdapter);
 
 

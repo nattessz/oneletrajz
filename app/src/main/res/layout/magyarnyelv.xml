@@ -1,46 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/magyardraw"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/lightgrey">
+        android:background="@color/lightgrey"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/focimmagy"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="434dp"
+            android:layout_height="70dp"
+            android:background="@color/light_grey"
             android:fontFamily="@font/theme"
             android:padding="20sp"
             android:text=" "
             android:textSize="22sp"
             android:textStyle="bold" />
 
-    <FrameLayout
-        android:id="@+id/magycontent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        <FrameLayout
+            android:id="@+id/magycontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_grey"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
     </LinearLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/design_navigation_view2"
-        app:headerLayout="@layout/header"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="@color/lightgrey"
-        app:itemTextColor="@color/grey"
-        app:menu="@menu/magyarmenu"
         android:layout_gravity="start"
-        app:itemTextAppearance="@style/MenuItems">
+        android:background="@drawable/fa"
+        app:headerLayout="@layout/header"
+        app:itemTextAppearance="@style/MenuItems"
+        app:itemTextColor="@color/grey"
+        app:menu="@menu/magyarmenu">
 
 
     </android.support.design.widget.NavigationView>

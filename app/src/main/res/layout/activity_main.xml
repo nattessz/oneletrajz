@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray"
+    android:background="@drawable/fohatter"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -12,11 +12,11 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="49dp"
+        android:fontFamily="@font/hand"
         android:gravity="center"
         android:text="@string/etrajz"
         android:textSize="30sp"
-        android:textStyle="bold"
-        android:fontFamily="@font/hand"/>
+        android:textStyle="bold" />
 
 
     <LinearLayout

@@ -21,22 +21,25 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton button2;
     private ImageButton button3;
     private ImageButton button5;
+    private Animation animMoveRight;
+    private Animation animMoveLeft;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        magyargomb =(ImageButton) findViewById(R.id.magygomb);
+        magyargomb = findViewById(R.id.magygomb);
         button5 = findViewById(R.id.button5);
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
         animMoveUp = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_up);
-        magyargomb.startAnimation(animMoveUp);
-        //button1.startAnimation(animMoveUp);
-        button2.startAnimation(animMoveUp);
-        button3.startAnimation(animMoveUp);
-        button5.startAnimation(animMoveUp);
+        animMoveRight = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_down);
+        animMoveLeft = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_left);
+        magyargomb.startAnimation(animMoveLeft);
+        button2.startAnimation(animMoveRight);
+        button3.startAnimation(animMoveLeft);
+        button5.startAnimation(animMoveRight);
 
 
         magyargomb.setOnClickListener(new View.OnClickListener() {

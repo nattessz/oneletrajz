@@ -1,5 +1,6 @@
 package com.nattessz.oneletrajz;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
@@ -33,20 +34,19 @@ public class NemetNyelv<nemetTog> extends MainActivity implements NavigationView
          super.onCreate(savedInstanceState);
          setContentView(R.layout.nemtnyelv);
 
-        focim = (TextView)findViewById(R.id.focim);
-        nemetDrawer = (DrawerLayout)findViewById(R.id.nemetdraw);
-        FrameLayout frameLayout = (FrameLayout)findViewById(R.id.flContent);
-        isDrawerFixed = getResources().getBoolean(R.bool.isDrawerFixed);
+        focim = findViewById(R.id.focim);
+        nemetDrawer = findViewById(R.id.nemetdraw);
+        FrameLayout frameLayout = findViewById(R.id.flContent);
         nemetTog = new ActionBarDrawerToggle(this,nemetDrawer,R.string.nyit,R.string.zar);
         nemetDrawer.addDrawerListener(nemetTog);
         nemetTog.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Typeface mTypeface = Typeface.createFromAsset(getAssets(), "hand.ttf");
 
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.design_navigation_view);
+        NavigationView navigationView = findViewById(R.id.design_navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
+        focim.setTypeface(mTypeface);
         focim.setText("Persönliche Angaben:");
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.flContent, new FragmentOne());
@@ -96,7 +96,7 @@ public class NemetNyelv<nemetTog> extends MainActivity implements NavigationView
             ft.commit();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.nemetdraw);
+        DrawerLayout drawer = findViewById(R.id.nemetdraw);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

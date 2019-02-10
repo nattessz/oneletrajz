@@ -1,5 +1,6 @@
 package com.nattessz.oneletrajz;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
@@ -31,17 +32,19 @@ public class MagyarNyelv extends MainActivity implements NavigationView.OnNaviga
        super.onCreate(savedInstanceState);
        setContentView(R.layout.magyarnyelv);
 
-        focim = (TextView)findViewById(R.id.focimmagy);
-        magyarDrawer = (DrawerLayout)findViewById(R.id.magyardraw);
-        FrameLayout frameLayout = (FrameLayout)findViewById(R.id.magycontent);
+        focim = findViewById(R.id.focimmagy);
+        magyarDrawer = findViewById(R.id.magyardraw);
+        FrameLayout frameLayout = findViewById(R.id.magycontent);
         magyarTog = new ActionBarDrawerToggle(this,magyarDrawer,R.string.nyit,R.string.zar);
         magyarDrawer.addDrawerListener(magyarTog);
         magyarTog.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Typeface mTypeface = Typeface.createFromAsset(getAssets(), "hand.ttf");
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.design_navigation_view2);
+        NavigationView navigationView = findViewById(R.id.design_navigation_view2);
         navigationView.setNavigationItemSelectedListener(this);
 
+        focim.setTypeface(mTypeface);
         focim.setText("Munkahelyeim:");
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.magycontent, new FragmentMunka());
@@ -91,7 +94,7 @@ public class MagyarNyelv extends MainActivity implements NavigationView.OnNaviga
             ft.commit();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.magyardraw);
+        DrawerLayout drawer = findViewById(R.id.magyardraw);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
