@@ -10,25 +10,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/lightgrey"
+        android:background="@color/colorPrimary"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/focimmagy"
-            android:layout_width="434dp"
-            android:layout_height="70dp"
-            android:background="@color/light_grey"
-            android:fontFamily="@font/theme"
-            android:padding="20sp"
-            android:text=" "
-            android:textSize="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="22sp"
+            android:text="@string/todoss"
             android:textStyle="bold" />
 
         <FrameLayout
             android:id="@+id/magycontent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/light_grey"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
     </LinearLayout>
 

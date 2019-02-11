@@ -23,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton button5;
     private Animation animMoveRight;
     private Animation animMoveLeft;
+    private TextView text1;
+    private TextView text2;
+    private TextView text3;
+    private TextView text4;
+    private TextView text5;
 
 
     @Override
@@ -33,9 +38,19 @@ public class MainActivity extends AppCompatActivity {
         button5 = findViewById(R.id.button5);
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
+        text1 = findViewById(R.id.textView1);
+        text2 = findViewById(R.id.textView2);
+        text3 = findViewById(R.id.textView3);
+        text4 = findViewById(R.id.textView4);
+        text5 = findViewById(R.id.textView5);
         animMoveUp = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_up);
         animMoveRight = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_down);
         animMoveLeft = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.move_left);
+        text1.startAnimation(animMoveRight);
+        text2.startAnimation(animMoveLeft);
+        text3.startAnimation(animMoveRight);
+        text4.startAnimation(animMoveLeft);
+        text5.startAnimation(animMoveRight);
         magyargomb.startAnimation(animMoveLeft);
         button2.startAnimation(animMoveRight);
         button3.startAnimation(animMoveLeft);

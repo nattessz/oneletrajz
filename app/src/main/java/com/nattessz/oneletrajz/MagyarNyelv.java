@@ -1,26 +1,26 @@
 package com.nattessz.oneletrajz;
 
+import android.content.Context;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
 
 
 public class MagyarNyelv extends MainActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     ListView listView;
-    ListView listView2;
     private DrawerLayout magyarDrawer;
     private ActionBarDrawerToggle magyarTog;
     private TextView focim;
@@ -39,15 +39,13 @@ public class MagyarNyelv extends MainActivity implements NavigationView.OnNaviga
         magyarDrawer.addDrawerListener(magyarTog);
         magyarTog.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        Typeface mTypeface = Typeface.createFromAsset(getAssets(), "hand.ttf");
 
         NavigationView navigationView = findViewById(R.id.design_navigation_view2);
         navigationView.setNavigationItemSelectedListener(this);
 
-        focim.setTypeface(mTypeface);
-        focim.setText("Munkahelyeim:");
+        focim.setText("Személyes adataim:");
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.magycontent, new FragmentMunka());
+        ft.replace(R.id.magycontent, new FragmentAdataim());
         ft.commit();
 
     }
@@ -58,37 +56,50 @@ public class MagyarNyelv extends MainActivity implements NavigationView.OnNaviga
         // menu gomb vezérlés
         int id = item.getItemId();
 
-        if (id == R.id.munka) {
+        if (id == R.id.szemelyes) {
+            focim.setText("Személyes adataim:");
+            vibrate();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.magycontent, new FragmentAdataim());
+            ft.commit();
+        }
+        else if (id == R.id.munka) {
             focim.setText("Munkahelyeim:");
+            vibrate();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.magycontent, new FragmentMunka());
             ft.commit();
         } else if (id == R.id.tanulmany) {
             focim.setText("Tanulmányaim:");
+            vibrate();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.magycontent, new FragmentTanul());
             ft.commit();
         }
         else if (id == R.id.nyelv) {
             focim.setText("Nyelvismeret:");
+            vibrate();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.magycontent, new FragmentNyelv());
             ft.commit();
         }
         else if (id == R.id.szakma) {
             focim.setText("Szakmai cél:");
+            vibrate();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.magycontent, new FragmentSzakma());
             ft.commit();
         }
         else if (id == R.id.ismeret) {
             focim.setText("Tapasztalat, jártasság:");
+            vibrate();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.magycontent, new FragmentTapaszt());
             ft.commit();
         }
         else if (id == R.id.tulahdonsag) {
             focim.setText("Személyes tulajdonságaim:");
+            vibrate();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.magycontent, new FragmentSzemely());
             ft.commit();
@@ -105,6 +116,18 @@ public class MagyarNyelv extends MainActivity implements NavigationView.OnNaviga
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void vibrate(){
+        //MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.nukeflash);
+        //mp.start();
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            v.vibrate(VibrationEffect.createOneShot(600, VibrationEffect.DEFAULT_AMPLITUDE));
+        } else {
+            v.vibrate(600);
+        }
+
     }
 
 }

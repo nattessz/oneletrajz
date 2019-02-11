@@ -1,24 +1,21 @@
 package com.nattessz.oneletrajz;
 
+import android.content.Context;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
 
 
 public class NemetNyelv<nemetTog> extends MainActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -41,12 +38,10 @@ public class NemetNyelv<nemetTog> extends MainActivity implements NavigationView
         nemetDrawer.addDrawerListener(nemetTog);
         nemetTog.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        Typeface mTypeface = Typeface.createFromAsset(getAssets(), "hand.ttf");
 
         NavigationView navigationView = findViewById(R.id.design_navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        focim.setTypeface(mTypeface);
         focim.setText("Persönliche Angaben:");
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.flContent, new FragmentOne());
@@ -62,35 +57,41 @@ public class NemetNyelv<nemetTog> extends MainActivity implements NavigationView
 
         if (id == R.id.person) {
             focim.setText("Persönliche Angaben:");
+            vibrate();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flContent, new FragmentOne());
             ft.commit();
         } else if (id == R.id.beruf) {
             focim.setText("Berufliche Erfahrungen:");
+            vibrate();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flContent, new FragmentBeruf());
             ft.commit();
         }
         else if (id == R.id.ausbild) {
             focim.setText("Ausbildung:");
+            vibrate();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flContent, new FragmentAusbild());
             ft.commit();
         }
         else if (id == R.id.motiv) {
             focim.setText("Motivation");
+            vibrate();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flContent, new FragmentMotiv());
             ft.commit();
         }
         else if (id == R.id.kentnis) {
             focim.setText("Kenntnisse:");
+            vibrate();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flContent, new FragmentKentnis());
             ft.commit();
         }
         else if (id == R.id.faigket) {
             focim.setText("Fähigkeiten, Fertigkeiten:");
+            vibrate();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flContent, new FragmentFahig());
             ft.commit();
@@ -111,6 +112,18 @@ public class NemetNyelv<nemetTog> extends MainActivity implements NavigationView
 
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
+
+    }
+
+    public void vibrate(){
+        //MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.nukeflash);
+        //mp.start();
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            v.vibrate(VibrationEffect.createOneShot(600, VibrationEffect.DEFAULT_AMPLITUDE));
+        } else {
+            v.vibrate(600);
+        }
 
     }
 }

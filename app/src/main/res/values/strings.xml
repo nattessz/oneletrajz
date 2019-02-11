@@ -26,4 +26,6 @@
     <string name="nagy_att">Nagy Attila</string>
     <string name="ez_az_els_fragmentem">Ez az első fragmentem</string>
     <string name="todo2">TODO</string>
+    <string name="todoss" />
+    <string name="focimem" />
 </resources>

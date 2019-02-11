@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fohatter"
+    android:background="@color/colorPrimary"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView1"
         android:layout_width="match_parent"
-        android:layout_height="49dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/hand"
         android:gravity="center"
         android:text="@string/etrajz"
@@ -21,116 +21,94 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="682dp"
-        android:layout_marginBottom="50dp"
-        android:background="@color/lightgrey"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20sp"
+        android:background="@color/colorPrimary"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/szem"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:padding="5sp"/>
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/nagy_attila"
+            android:textSize="24sp"
+            android:textStyle="italic"
+            android:padding="5sp"/>
+
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginBottom="2dp"
-            android:drawablePadding="0dp"
-            android:fontFamily="@font/hand"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/szem"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:text="@string/cimem"
+            android:textSize="24sp"
+            android:textStyle="italic"
+            android:padding="5sp"/>
 
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/hand"
-            android:gravity="center"
-            android:text="@string/nagy_attila"
-            android:textSize="18sp"
-            android:textStyle="italic" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/hand"
-            android:gravity="center"
-            android:text="@string/anyja"
-            android:textSize="14sp"
-            android:textStyle="italic" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/hand"
-            android:gravity="center"
-            android:text="@string/cimem"
-            android:textSize="14sp"
-            android:textStyle="italic" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/hand"
-            android:gravity="center"
-            android:text="@string/szulhely"
-            android:textSize="14sp"
-            android:textStyle="italic" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/hand"
-            android:gravity="center"
-            android:text="@string/szulido"
-            android:textSize="14sp"
-            android:textStyle="italic" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/hand"
             android:gravity="center"
             android:text="@string/gazdinfo"
-            android:textSize="14sp"
-            android:textStyle="italic" />
+            android:textSize="24sp"
+            android:textStyle="italic"
+            android:padding="5sp"/>
 
         <ImageButton
             android:id="@+id/magygomb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
             android:contentDescription="@string/todo"
             android:gravity="center"
-            app:srcCompat="@drawable/myargomb" />
+            android:padding="10sp"
+            app:srcCompat="@drawable/button_magyar_ny" />
 
         <ImageButton
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
             android:contentDescription="@string/todo"
             android:gravity="center"
-            app:srcCompat="@drawable/nemetgomb" />
+            android:padding="10sp"
+            app:srcCompat="@drawable/button_nemet_ny" />
 
 
         <ImageButton
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
             android:contentDescription="@string/todo"
             android:gravity="center"
-            app:srcCompat="@drawable/bizony" />
+            android:padding="10sp"
+            app:srcCompat="@drawable/button_bizonyitvanyaim" />
 
         <ImageButton
             android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
             android:contentDescription="@string/todo"
             android:gravity="center"
-            app:srcCompat="@drawable/hivas" />
+            android:padding="10sp"
+            app:srcCompat="@drawable/button_hivas" />
 
 
     </LinearLayout>
