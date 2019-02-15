@@ -17,7 +17,8 @@
             android:id="@+id/focimmagy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="22sp"
+            android:padding="18sp"
+            android:textSize="30sp"
             android:text="@string/todoss"
             android:textStyle="bold" />
 
@@ -36,7 +37,7 @@
         android:background="@drawable/fa"
         app:headerLayout="@layout/header"
         app:itemTextAppearance="@style/MenuItems"
-        app:itemTextColor="@color/grey"
+        app:itemTextColor="@color/colorPrimaryDark"
         app:menu="@menu/magyarmenu">
 
 

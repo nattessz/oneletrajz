@@ -39,7 +39,7 @@ public class FragmentKentnis extends Fragment{
                android.R.layout.simple_list_item_1,
                personkentnis
         );
-        Animation scaleUp = AnimationUtils.loadAnimation(getActivity(), R.anim.move_up);
+        Animation scaleUp = AnimationUtils.loadAnimation(getActivity(), R.anim.move_down);
         listView1.startAnimation(scaleUp);
         listView1.setAdapter(listViewAdapter);
         return view;

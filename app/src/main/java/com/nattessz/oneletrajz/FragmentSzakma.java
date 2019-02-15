@@ -27,7 +27,7 @@ public class FragmentSzakma extends Fragment {
                 szakma
         );
 
-        Animation scaleUp = AnimationUtils.loadAnimation(getActivity(), R.anim.move_up);
+        Animation scaleUp = AnimationUtils.loadAnimation(getActivity(), R.anim.move_left);
         listView.startAnimation(scaleUp);
         listView.setAdapter(listViewAdapter);
         return view;

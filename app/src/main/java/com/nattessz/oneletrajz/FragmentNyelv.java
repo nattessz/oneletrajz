@@ -27,7 +27,7 @@ public class FragmentNyelv extends Fragment {
                 android.R.layout.simple_list_item_1,
                 nyelv
         );
-        Animation scaleUp = AnimationUtils.loadAnimation(getActivity(), R.anim.move_up);
+        Animation scaleUp = AnimationUtils.loadAnimation(getActivity(), R.anim.move_down);
         listView.startAnimation(scaleUp);
         listView.setAdapter(listViewAdapter);
         return view;

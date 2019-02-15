@@ -38,7 +38,7 @@ public class FragmentFahig extends Fragment {
                 android.R.layout.simple_list_item_1,
                 personfhaig
         );
-        Animation scaleUp = AnimationUtils.loadAnimation(getActivity(), R.anim.move_up);
+        Animation scaleUp = AnimationUtils.loadAnimation(getActivity(), R.anim.move_left);
         listView.startAnimation(scaleUp);
         listView.setAdapter(listViewAdapter);
         return view;

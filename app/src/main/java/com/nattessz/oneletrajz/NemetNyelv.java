@@ -1,5 +1,6 @@
 package com.nattessz.oneletrajz;
 
+import android.app.Fragment;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
@@ -13,9 +14,11 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class NemetNyelv<nemetTog> extends MainActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -31,6 +34,8 @@ public class NemetNyelv<nemetTog> extends MainActivity implements NavigationView
          super.onCreate(savedInstanceState);
          setContentView(R.layout.nemtnyelv);
 
+
+        Toast.makeText(this, "Wählen Sie einen Menüpunkt!", Toast.LENGTH_LONG).show();
         focim = findViewById(R.id.focim);
         nemetDrawer = findViewById(R.id.nemetdraw);
         FrameLayout frameLayout = findViewById(R.id.flContent);

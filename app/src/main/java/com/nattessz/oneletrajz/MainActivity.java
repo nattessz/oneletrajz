@@ -12,6 +12,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         button2.startAnimation(animMoveRight);
         button3.startAnimation(animMoveLeft);
         button5.startAnimation(animMoveRight);
-
 
         magyargomb.setOnClickListener(new View.OnClickListener() {
           @Override

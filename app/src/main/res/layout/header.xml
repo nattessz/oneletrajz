@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="280dp"
-        android:layout_height="136dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         android:contentDescription="@string/todo2"
         app:srcCompat="@drawable/cutmypic1" />
 </LinearLayout>

@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MagyarNyelv extends MainActivity implements NavigationView.OnNavigationItemSelectedListener{
@@ -32,6 +33,7 @@ public class MagyarNyelv extends MainActivity implements NavigationView.OnNaviga
        super.onCreate(savedInstanceState);
        setContentView(R.layout.magyarnyelv);
 
+        Toast.makeText(this, "Válassz egy menüpontot!", Toast.LENGTH_LONG).show();
         focim = findViewById(R.id.focimmagy);
         magyarDrawer = findViewById(R.id.magyardraw);
         FrameLayout frameLayout = findViewById(R.id.magycontent);

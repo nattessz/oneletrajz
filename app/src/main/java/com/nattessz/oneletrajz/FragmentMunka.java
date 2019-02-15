@@ -27,7 +27,7 @@ public class FragmentMunka extends Fragment {
                 android.R.layout.simple_list_item_1,
                 munka
         );
-        Animation scaleUp = AnimationUtils.loadAnimation(getActivity(), R.anim.move_down);
+        Animation scaleUp = AnimationUtils.loadAnimation(getActivity(), R.anim.move_left);
         listView.startAnimation(scaleUp);
         listView.setAdapter(listViewAdapter);
         return view;

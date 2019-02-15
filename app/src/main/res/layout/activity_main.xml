@@ -15,14 +15,14 @@
         android:fontFamily="@font/hand"
         android:gravity="center"
         android:text="@string/etrajz"
-        android:textSize="30sp"
+        android:textSize="22sp"
         android:textStyle="bold" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20sp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="3sp"
         android:background="@color/colorPrimary"
         android:orientation="vertical">
 
@@ -32,10 +32,9 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/szem"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:padding="5sp"/>
-
+            android:padding="2sp"/>
 
         <TextView
             android:id="@+id/textView3"
@@ -43,9 +42,9 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/nagy_attila"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="italic"
-            android:padding="5sp"/>
+            android:padding="2sp"/>
 
 
         <TextView
@@ -54,9 +53,9 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/cimem"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="italic"
-            android:padding="5sp"/>
+            android:padding="2sp"/>
 
 
         <TextView
@@ -65,9 +64,9 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/gazdinfo"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="italic"
-            android:padding="5sp"/>
+            android:padding="2sp"/>
 
         <ImageButton
             android:id="@+id/magygomb"
@@ -76,8 +75,8 @@
             android:background="@color/colorPrimary"
             android:contentDescription="@string/todo"
             android:gravity="center"
-            android:padding="10sp"
-            app:srcCompat="@drawable/button_magyar_ny" />
+            android:padding="2sp"
+            app:srcCompat="@drawable/magyargomb" />
 
         <ImageButton
             android:id="@+id/button2"
@@ -86,8 +85,8 @@
             android:background="@color/colorPrimary"
             android:contentDescription="@string/todo"
             android:gravity="center"
-            android:padding="10sp"
-            app:srcCompat="@drawable/button_nemet_ny" />
+            android:padding="2sp"
+            app:srcCompat="@drawable/nemetgombom" />
 
 
         <ImageButton
@@ -97,8 +96,8 @@
             android:background="@color/colorPrimary"
             android:contentDescription="@string/todo"
             android:gravity="center"
-            android:padding="10sp"
-            app:srcCompat="@drawable/button_bizonyitvanyaim" />
+            android:padding="2sp"
+            app:srcCompat="@drawable/bizonygomb" />
 
         <ImageButton
             android:id="@+id/button5"
@@ -107,8 +106,8 @@
             android:background="@color/colorPrimary"
             android:contentDescription="@string/todo"
             android:gravity="center"
-            android:padding="10sp"
-            app:srcCompat="@drawable/button_hivas" />
+            android:padding="2sp"
+            app:srcCompat="@drawable/hivogomb" />
 
 
     </LinearLayout>
